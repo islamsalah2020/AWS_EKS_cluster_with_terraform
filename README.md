@@ -4,13 +4,13 @@ This repo for creating and configuring the AWS EKS cluster using Terraform
   
 
 ## Prerequisite
-#### AWS account
+- #### AWS account
 	- Create aws user with admin priviliges to be able to create the aws resourses that we will need to implement our eks cluster.
 
-#### Install the following tools
-	- AWS cli [`AWS cli`](https://aws.amazon.com/cli/)
-	- [`Terraform`](https://www.terraform.io/downloads.html)
-	- [`kubectl`] (https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- #### Install the following tools
+	- [AWS cli](https://aws.amazon.com/cli/)
+	- [Terraform](https://www.terraform.io/downloads.html)
+	- [kubectl] (https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 	
 	
 ## Steps
@@ -49,6 +49,6 @@ terraform apply
 
 
 ## Resources
-	- [`AWS Terraform module`](https://registry.terraform.io/providers/hashicorp/aws/latest)
-	- [`Provision an EKS Cluster with Terraform`](https://learn.hashicorp.com/tutorials/terraform/eks)
-	- [`AWS EKS Resources`](https://registry.terraform.io/providers/hashicorp/aws/3.58.0/docs/resources/eks_cluster)
+	- [AWS Terraform module](https://registry.terraform.io/providers/hashicorp/aws/latest)
+	- [Provision an EKS Cluster with Terraform](https://learn.hashicorp.com/tutorials/terraform/eks)
+	- [AWS EKS Resources](https://registry.terraform.io/providers/hashicorp/aws/3.58.0/docs/resources/eks_cluster)
