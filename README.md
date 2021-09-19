@@ -34,11 +34,9 @@ Default output format [None]: json
 
 ## Deployment
 ```
-
 terraform init
 terraform plan
 terraform apply
-
 ```	
 
 when we run `terraform init` we got in console output:
