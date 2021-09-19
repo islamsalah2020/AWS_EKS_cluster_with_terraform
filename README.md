@@ -42,13 +42,18 @@ terraform apply
 ```	
 
 when we run `terraform init` we got in console output:
+
 ![terraform init](/Console_Output/terraform_init.png)
 
 
+
 when we run `terraform plan` we got in console output:
+
 ![terraform plan](/Console_Output/terraform_plan1.png)
 
 ![terraform plan](/Console_Output/terraform_plan2.png)
+
+And we can use `terraform destroy` to delete the created cluster.
 
 ## Resources
 - [AWS Terraform module](https://registry.terraform.io/providers/hashicorp/aws/latest)
