@@ -31,7 +31,6 @@ Default output format [None]: json
 	- Create `security-groups.tf` to provision the security groups used by the EKS cluster.
 	- Create `eks-cluster.tf` to provision all the resources required to set up an EKS cluster using the AWS EKS Module.
 	- Create `output.tf` defines the output configuration, for creating kubeconfig to use it for deployment to kube cluster.
-	- Create `kubernetes.tf` to deploy services on Kubernetes clusters.
 
 
 	
