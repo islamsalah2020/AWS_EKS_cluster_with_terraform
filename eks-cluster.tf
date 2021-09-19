@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = ">= 3.56.0"
+      version = ">= 2.7.0"
+      source = "hashicorp/aws"
     }
   }
 }
@@ -28,10 +28,6 @@ module "eks" {
     },
   ]
 
-  worker_additional_security_group_ids = [aws_security_group.all_worker_mgmt.id]
-  map_roles                            = var.map_roles
-  map_users                            = var.map_users
-  map_accounts                         = var.map_accounts
 }
 
 # declared endpoint and token for the deploy on k8s cluster

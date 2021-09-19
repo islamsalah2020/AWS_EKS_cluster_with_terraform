@@ -30,23 +30,25 @@ Default output format [None]: json
 	- Create `vpc.tf` to create and provision VPC, Private and Public subnets.
 	- Create `security-groups.tf` to provision the security groups used by the EKS cluster.
 	- Create `eks-cluster.tf` to provision all the resources required to set up an EKS cluster using the AWS EKS Module.
-	- Create `output.tf` defines the output configuration, for creating kubeconfig to use it for deployment to kube cluster.
+	- Create `output.tf` defines the output configuration.
 
-
-	
 ## Deployment
-
-
 ```
-cd ~/eks_cluster
 
 terraform init
-
 terraform plan
 terraform apply
 
 ```	
 
+when we run `terraform init` we got in console output:
+![terraform init](/Console_Output/terraform_init.png)
+
+
+when we run `terraform plan` we got in console output:
+![terraform plan](/Console_Output/terraform_plan1.png)
+
+![terraform plan](/Console_Output/terraform_plan2.png)
 
 ## Resources
 - [AWS Terraform module](https://registry.terraform.io/providers/hashicorp/aws/latest)

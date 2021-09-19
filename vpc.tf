@@ -1,13 +1,3 @@
-locals {
-  cluster_name = "my_eks_cluster"
-}
-
-resource "aws_eip" "nat" {
-  count = 3
-
-  vpc = true
-}
-
 data "aws_availability_zones" "available" {
 }
 
@@ -23,15 +13,10 @@ module "vpc" {
   # Public subnet for Internet Gateway to provide public routing
   public_subnets       = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
   enable_nat_gateway   = true
-  single_nat_gateway   = false
+  single_nat_gateway   = true
   enable_dns_hostnames = true
-  # Passing the 3 IPs into the module for the 3 subnets
-  reuse_nat_ips = true
-  external_nat_ip_ids = "${aws_eip.nat.*.id}"
   
-  tags = {
-    "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-  }
+
 
   public_subnet_tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
